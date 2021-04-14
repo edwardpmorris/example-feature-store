@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "PropertyAttribute",
+    "description": "Defines metadata attributes about properties.",
+    "examples": [
+        {
+            "short_name": "ndvi",
+            "standard_name": "normalized_difference_vegetation_index",
+            "units": "1",
+            "long_name": "Normalised Difference Vegetation Index (NDVI)",
+            "description": "Normalized_difference_vegetation_index, usually abbreviated to NDVI, is an index calculated from reflectances measured in the visible and near infrared channels. It is calculated as NDVI = (NIR - R) / (NIR + R) where NIR is the reflectance in the near-infrared band and R is the reflectance in the red visible band. Reflectance is the ratio of the reflected over the incoming radiation in each spectral band. The calculated value of NDVI depends on the precise definitions of the spectral bands and these definitions may vary between different models and remote sensing instruments.",
+            "missing_value": 0,
+            "data_type": "number",
+            "url": "http://cfconventions.org/Data/cf-standard-names/74/build/cf-standard-name-table.html"
+        }
+    ],
+    "required": [
+        "short_name",
+        "standard_name",
+        "units",
+        "long_name",
+        "description",
+        "missing_value",
+        "data_type"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "short_name": {
+            "$id": "#/properties/short_name",
+            "type": "string",
+            "title": "The short_name schema",
+            "description": "The property short name, e.g. name used in object.",
+            "examples": [
+                "ndvi"
+            ]
+        },
+        "standard_name": {
+            "$id": "#/properties/standard_name",
+            "type": "string",
+            "title": "The standard_name schema",
+            "description": "A CF standard style standard name. See http://cfconventions.org/Data/cf-standard-names/74/build/cf-standard-name-table.html",
+            "examples": [
+                "normalized_difference_vegetation_index"
+            ]
+        },
+        "units": {
+            "$id": "#/properties/units",
+            "type": "string",
+            "title": "The units schema",
+            "description": "The units of the property, as a string using / notation.",
+            "examples": [
+                "1"
+            ]
+        },
+        "long_name": {
+            "$id": "#/properties/long_name",
+            "type": "string",
+            "title": "The long_name schema",
+            "description": "A human readable name of the property.",
+            "examples": [
+                "Normalised Difference Vegetation Index (NDVI)"
+            ]
+        },
+        "description": {
+            "$id": "#/properties/description",
+            "type": "string",
+            "title": "The description schema",
+            "description": "A short description about the property.",
+            "examples": [
+                "Normalized_difference_vegetation_index, usually abbreviated to NDVI, is an index calculated from reflectances measured in the visible and near infrared channels. It is calculated as NDVI = (NIR - R) / (NIR + R) where NIR is the reflectance in the near-infrared band and R is the reflectance in the red visible band. Reflectance is the ratio of the reflected over the incoming radiation in each spectral band. The calculated value of NDVI depends on the precise definitions of the spectral bands and these definitions may vary between different models and remote sensing instruments."
+            ]
+        },
+        "missing_value": {
+            "$id": "#/properties/missing_value",
+             "anyOf": [
+               { "type": "string" },
+               { "type": "number" },
+               { "type": "null" },
+               { "type": "integer" }
+               ],
+            "title": "The missing_value schema",
+            "description": "Indicate what missing values are.",
+            "examples": [
+                0
+            ]
+        },
+        "data_type": {
+            "$id": "#/properties/data_type",
+            "type": "string",
+            "title": "The data_type schema",
+            "description": "String indicating data type.",
+            "examples": [
+                "number"
+            ]
+        },
+        "url": {
+            "$id": "#/properties/url",
+            "type": "string",
+            "title": "The url schema",
+            "description": "Optional URL linking to more details about the property.",
+            "examples": [
+                "http://cfconventions.org/Data/cf-standard-names/74/build/cf-standard-name-table.html"
+            ]
+        }
+    }
+}

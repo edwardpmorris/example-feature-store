@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "CollectionLookUp",
+    "description": "Object with arrays used to lookup Feature and Geometry IDs.",
+    "examples": [
+        {
+            "fid": [
+                "fid1",
+                "fid2"
+            ],
+            "gid": [
+                "gid1",
+                "gid2"
+            ]
+        }
+    ],
+    "required": [
+        "fid",
+        "gid"
+    ],
+    "properties": {
+        "additionalProperties": {
+            "type": "array"
+        },
+        "fid": {
+            "$id": "#/properties/fid",
+            "type": "array",
+            "title": "The fid schema",
+            "description": "Feature ID string.",
+            "items": {
+                "$id": "#/properties/fid/items",
+                "anyOf": [
+                    {
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "gid": {
+            "$id": "#/properties/gid",
+            "type": "array",
+            "title": "The gid schema",
+            "description": "Geometry ID code",
+            "items": {
+                "$id": "#/properties/gid/items",
+                "anyOf": [
+                    {
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    }
+}

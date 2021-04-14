@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "title": "SemanticVersion",
+    "description": "Defines a semantic version string.",
+    "examples": ["1.0.0"],
+    "type": "string",
+    "minLength": 5,
+    "maxLength": 14,
+    "pattern": "^(?:0|[1-9]\\d*)\\.(?:0|[1-9]\\d*)\\.(?:0|[1-9]\\d*)$"
+}

@@ -1,0 +1,44 @@
+{
+    "store": {
+        "root_path": "./fstore",
+        "git": {},
+        "gcs": {},
+        "s3": {}
+    },
+    "feature_collections": [
+        {
+            "type": "FeatureCollection",
+            "id": "gadm36",
+            "collection_metadata": {
+                "name": "Database of Global Administrative Areas",
+                "license": "https://gadm.org/license.html",
+                "url": "https://gadm.org",
+                "version": "3.6",
+                "keywords": [
+                    "countries",
+                    "regions"
+                ],
+                "description": "GADM wants to map the administrative areas of all countries, at all levels of sub-division. We use a high spatial resolution, and of a extensive set of attributes.",
+                "language": "en",
+                "altName": "GADM",
+                "citation": "",
+                "spatialCoverage": "Global land",
+                "temporalCoverage": "approx. 2018",
+                "dataLineage": "Dataset was downloaded from https://gadm.org as SHP files and converted to GeoJSON."
+            },
+            "feature_property_attributes": [
+                {
+                    "short_name": "gadm_id",
+                    "standard_name": "gadm_identifier",
+                    "units": "1",
+                    "long_name": "GADM unique identifier",
+                    "description": "The GID starts with the three letter ISO 3166-1 alpha-3 country code. If there are subdivisions these are identified by a number from 1 to n, where n is the number of subdivisions at level 1. This value is concatenated with the country code, using a dot to delimit the two. For example, AFG.1, AFG.2, ..., AFG.n. If there are second level subdivisions, numeric codes are assigned within each first level subdivision and these are concatenated with the first level identifier, using a dot as delimiter. For example, AFG.1.1, AFG.1.2, AFG.1.3, ..., and AFG.2.1, AFG.2.2, .... And so forth for the third, fourth and fifth levels. Finally there is an underscore followed by a version number appended to the code. For example, AFG.3_1 and AFG.3.2_1.",
+                    "missing_value": null,
+                    "data_type": "string",
+                    "url": "https://gadm.org/metadata.html"
+                }
+            ],
+            "features": [{}]
+        }
+    ]
+}

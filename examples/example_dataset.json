@@ -1,0 +1,7 @@
+{
+    "type": "Dataset",
+    "id": "<human-readable-name>",
+    "metadata": "<MetaData object>",
+    "property_attributes": ["<PropertyAttributes object>", "<PropertyAttributes object>"],
+    "layers": ["<Layer object>"]
+}

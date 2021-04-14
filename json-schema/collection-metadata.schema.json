@@ -1,0 +1,151 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "CollectionMetaData",
+    "description": "Defines Dataset metadata.",
+    "examples": [
+       {
+            "name": "Database of Global Administrative Areas",
+            "license": "https://gadm.org/license.html",
+            "url": "https://gadm.org",
+            "version": "3.6.0",
+            "keywords": [
+                "countries",
+                "regions"
+            ],
+            "description": "GADM wants to map the administrative areas of all countries, at all levels of sub-division. We use a high spatial resolution, and of a extensive set of attributes.",
+            "language": "en",
+            "altName": "GADM",
+            "citation": "",
+            "spatialCoverage": "Global land",
+             "temporalCoverage": "approx. 2018",
+            "dataLineage": "Dataset was downloaded from https://gadm.org as SHP files and converted to GeoJSON."
+        }
+    ],
+    "required": [
+        "name"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "The name schema",
+            "description": "The human readble name of the dataset.",
+            "examples": [
+                "Database of Global Administrative Areas"
+            ]
+        },
+        "license": {
+            "$id": "#/properties/license",
+            "type": "string",
+            "title": "The license schema",
+            "description": "A string giving the dataset licensing terms, usually a url.",
+            "examples": [
+                "https://gadm.org/license.html"
+            ]
+        },
+        "url": {
+            "$id": "#/properties/url",
+            "type": "string",
+            "title": "The url schema",
+            "description": "A url link to more information about the dataset.",
+            "examples": [
+                "https://gadm.org"
+            ]
+        },
+        "version": {
+            "$id": "#/properties/version",
+            "type": "string",
+            "title": "The version schema",
+            "description": "A string describing the dataset version.",
+            "examples": [
+                "3.6.0"
+            ]
+        },
+        "keywords": {
+            "$id": "#/properties/keywords",
+            "type": "array",
+            "title": "The keywords schema",
+            "description": "An array of keywords describing the data.",
+            "examples": [
+                [
+                    "countries",
+                    "regions"
+                ]
+            ],
+            "items": {
+                "$id": "#/properties/keywords/items",
+                "anyOf": [
+                    {
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "description": {
+            "$id": "#/properties/description",
+            "type": "string",
+            "title": "The description schema",
+            "description": "Short description of the dataset.",
+            "examples": [
+                "GADM wants to map the administrative areas of all countries, at all levels of sub-division. We use a high spatial resolution, and of a extensive set of attributes."
+            ]
+        },
+        "language": {
+            "$id": "#/properties/language",
+            "type": "string",
+            "title": "The language schema",
+            "description": "The language of terms and properties of the dataset.",
+            "examples": [
+                "en"
+            ]
+        },
+        "altName": {
+            "$id": "#/properties/altName",
+            "type": "string",
+            "title": "The altName schema",
+            "description": "An alternative name for the dataset.",
+            "examples": [
+                "GADM"
+            ]
+        },
+        "citation": {
+            "$id": "#/properties/citation",
+            "type": "string",
+            "title": "The citation schema",
+            "description": "A string providing a citation for the dataset.",
+            "examples": [
+                ""
+            ]
+        },
+        "spatialCoverage": {
+            "$id": "#/properties/spatialCoverage",
+            "type": "string",
+            "title": "The spatialCoverage schema",
+            "description": "String giving general spatial coverage of the dataset. Use unknown if not defined",
+            "examples": [
+                "Global land"
+            ]
+        },
+        "temporalCoverage": {
+            "$id": "#/properties/temporalCoverage",
+            "type": "string",
+            "title": "The temporalCoverage schema",
+            "description": "String giving general temporal coverage of the dataset. Use unknown if not defined",
+            "examples": [
+                "approx. 2018"
+            ]
+        },
+        "dataLineage": {
+            "$id": "#/properties/dataLineage",
+            "type": "string",
+            "title": "The dataLineage schema",
+            "description": "Describe general data processing steps taken.",
+            "examples": [
+                "Dataset was downloaded from https://gadm.org as SHP files and converted to GeoJSON."
+            ]
+        }
+    }
+}
